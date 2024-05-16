@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Czy Patryk jest głodny?</title>
+    <style>
+        body {
+            background-color: palevioletred;
+            color: black;
+            font-size: 200%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <label for="odpowiedz">Czy Patryk jest głodny?</label>
+    <input type="text" id="odpowiedz">
+    <button onclick="sprawdzOdpowiedz()">Sprawdź</button>
+    <p id="wynik"></p>
+
+    <script>
+        function sprawdzOdpowiedz() {
+            var odpowiedz = document.getElementById("odpowiedz").value.toLowerCase();
+            var wynikElement = document.getElementById("wynik");
+
+            if (odpowiedz === "tak") {
+                wynikElement.innerText = "Patryk powinien zjeść cały obiad złożony z dwóch posiłków!";
+            } else if (odpowiedz === "nie") {
+                wynikElement.innerText = "Patryk nie powinien jeść całego obiadu, ale może zjeść tylko drugie danie.";
+            } else {
+                wynikElement.innerText = "Patryk nie wie czy powinien zjeść obiad, więc niech zje zupę. ";
+            }
+        }
+    </script>
+</body>
+</html>
